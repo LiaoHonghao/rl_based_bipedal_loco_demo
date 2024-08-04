@@ -1,0 +1,95 @@
+---
+layout: ../layouts/Layout.astro
+title: Model-free Reinforcement Learning-based Locomotion for Bipedal Robot
+description: Simple project page template for your research paper, built with Astro and Tailwind CSS
+favicon: /favicon.svg
+thumbnail: /screenshot.png
+---
+
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../components/Header.astro";
+import TwoColumns from "../components/TwoColumns.astro";
+import Video from "../components/Video.astro";
+import YouTubeVideo from "../components/YouTubeVideo.astro";
+import PDF from "../components/PDF.astro";
+import Figure from "../components/Figure.astro";
+import LaTeX from "../components/LaTeX.astro";
+import SmallCaps from "../components/SmallCaps.astro";
+import Splat from "../components/Splat.tsx"
+
+import CodeBlock from "../components/CodeBlock.astro";
+export const components = {pre: CodeBlock}
+
+import outside from "../assets/outside.mp4";
+import transformer from "../assets/transformer.webp";
+
+<Header
+  title={frontmatter.title}
+  authors={[
+    {
+      name: "Honghao Liao",
+      url: "",
+      institution: "VsisLab, Shandong University, China",
+      notes: [],
+      mail: "202214818@mail.sdu.edu.cn",
+    },
+  ]}
+  conference="Project Duration: 2023.03 - 2023.12"
+  /> 
+
+## Project Introduction
+
+In this project, we developed a series of locomotion controllers for the bipedal robot XR4 in [Mujoco](https://mujoco.org/) using model-free reinforcement learning. These locomotion controllers enable XR4 to walk and run on different terrains, as well as demonstrate agile football dribbling skills.
+
+## Demonstrations
+
+### **Step in Place**
+
+Demonstration of basic locomotion ability of a bipedal robot - stepping in place.
+
+<Figure caption="">
+  <YouTubeVideo videoId="PyiQK_RHIso" />
+</Figure>
+
+### **Walk in Different Terrains**
+
+Demonstrations of neural network locomotion policy that can adapt to different terrains. The forward walking speed of the bipedal robot is set to a fixed 1 m/s.
+
+<Figure caption="walk forward in hill field terrain.">
+  <YouTubeVideo videoId="5c0aGqhqhMU" />
+</Figure>
+
+<Figure caption="walk forward in pyraimd terrain.">
+  <YouTubeVideo videoId="XDIOHzAX2kU" />
+</Figure>
+
+<Figure caption="walk forward in step stone terrain.">
+  <YouTubeVideo videoId="bmgr3Rk6gEY" />
+</Figure>
+
+### **Run**
+
+Demonstrations of natural forward running ability.
+
+<Figure caption="run forward at 2m/s.">
+  <YouTubeVideo videoId="3Qw8aHQbFA8" />
+</Figure>
+
+<Figure caption="run forward at 3m/s.">
+  <YouTubeVideo videoId="pGK-4dU9Eko" />
+</Figure>
+
+### **Football Dribble**
+
+Demonstrations of a continuous football dribbling task combining locomotion ability and simple object interaction.
+
+<Figure caption="agile football dribble video 1.">
+  <YouTubeVideo videoId="ViZC3VMrHes" />
+</Figure>
+
+<Figure caption="agile football dribble video 2.">
+  <YouTubeVideo videoId="naxKrHMV5n0" />
+</Figure>
